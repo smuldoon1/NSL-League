@@ -1,0 +1,45 @@
+//nsl header block
+{
+    "Name": "headerBlock",
+    "BlockType": "dock",
+    "Orientation": "Horizontal",
+    "HorizontalAlignment": "Center",
+    "Items": [
+        // header
+        {
+            // league logo
+            "Name": "league logo",
+            "BlockType": "image",
+            "ImageOptions": {
+                "Path": "nsl_logo.png"
+            },
+            "Padding": "24"            
+        },
+        {
+            "Name": "standings text",
+            "BlockType": "stack",
+            "Orientation": "Vertical",
+            "Padding": "100, 2",
+            "Spacing": 12,
+            "HorizontalAlignment": "Left",
+            "Items": [
+                {
+                    "BlockType": "text",
+                    "Source": "{Season.Name, Converter=StringToUpperString} <championship>",
+                    "FontSize": 80,
+                    "FontName": "Formula1-Bold.ttf",
+                    "FontStyle": "BoldItalic",
+                    "Foreground": "#ffffff"
+                },
+                {
+                    "BlockType": "text",
+                    "Source": "CHAMPIONSHIP STANDINGS",
+                    "FontSize": 80,
+                    "FontName": "Formula1-Bold.ttf",
+                    "FontStyle": "BoldItalic",
+                    "Foreground": "#ffffff"
+                }
+            ]
+        }
+    ]
+}

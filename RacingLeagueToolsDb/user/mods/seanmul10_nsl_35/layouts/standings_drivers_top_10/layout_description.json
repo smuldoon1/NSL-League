@@ -1,0 +1,6 @@
+{
+    "LayoutName": "driverStandings",
+    "RenderType": "DriverStandings",
+	"RenderCaption": "Top 10",
+    "Index" : 1
+}

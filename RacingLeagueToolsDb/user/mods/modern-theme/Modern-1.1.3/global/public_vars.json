@@ -1,0 +1,12 @@
+{
+  "NotF1SeasonOrCustomTeams": false,
+  "ShowCountryFlagsForDrivers": true,
+  "ShowPenaltyPointsInStandings": true,
+  "ShowWinnerInCalendar": true,
+  "ShowTrackIconInCalendar": true,
+  "ShowCountryFlagsIconInCalendar": true,
+  "RenderReserveDriver": false,
+  "RenderPodiumColors": true,
+  "SecondCalendarEventsInColumn": 11,
+  "ReserveDriverMax": 0
+}

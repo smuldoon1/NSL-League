@@ -1,0 +1,15 @@
+/*
+
+# Git ignore and readme
+!.gitignore
+!.README.md
+
+# Mods folder
+!*/
+*/*
+!*/user/
+*/user/*
+!*/user/mods/
+
+# Zip folders
+**.zip
