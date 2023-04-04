@@ -4,12 +4,10 @@
 !.gitignore
 !.README.md
 
-# Mods folder
+# User folder
 !*/
 */*
 !*/user/
-*/user/*
-!*/user/mods/
 
-# Zip folders
-**.zip
+# Mods zip folder
+!Mods/*.zip
