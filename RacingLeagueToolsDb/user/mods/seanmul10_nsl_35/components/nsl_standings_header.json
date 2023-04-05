@@ -13,7 +13,8 @@
             "ImageOptions": {
                 "Path": "nsl_logo.png"
             },
-            "Padding": "24"            
+            "Padding": "24",
+            "Height": 150    
         },
         {
             "Name": "standings text",
@@ -26,7 +27,7 @@
                 {
                     "BlockType": "text",
                     "Source": "{Season.Name, Converter=StringToUpperString} <championship>",
-                    "FontSize": 80,
+                    "FontSize": 70,
                     "FontName": "Formula1-Bold.ttf",
                     "FontStyle": "BoldItalic",
                     "Foreground": "#ffffff"
@@ -34,7 +35,7 @@
                 {
                     "BlockType": "text",
                     "Source": "CHAMPIONSHIP STANDINGS",
-                    "FontSize": 80,
+                    "FontSize": 70,
                     "FontName": "Formula1-Bold.ttf",
                     "FontStyle": "BoldItalic",
                     "Foreground": "#ffffff"

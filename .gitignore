@@ -7,7 +7,12 @@
 # User folder
 !*/
 */*
-!*/user/
+!*/user/mods
+
+# Don't pick up database/backup changes
+*/user/databases
+*/user/backups
+**.db
 
 # Mods zip folder
 !Mods/*.zip

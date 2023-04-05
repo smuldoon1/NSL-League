@@ -42,8 +42,31 @@
                             "Header": "",
                             "WidthStretch" : true,                            
                             "Template": {
-                                "BlockType" : "component",
-                                "ComponentName" : "driver_line_cell"   
+                                "BlockType": "stack",
+                                "HorizontalAlignment": "Left",
+                                "VerticalAlignment": "Center",
+                                "Background": "{Item.Team.Color}",
+                                "Height": 140,
+                                "Items": [
+                                    {
+                                        "BlockType": "image",
+                                        "Height": 300,
+                                        "MarginRight": 0,
+                                        "VerticalAlignment": "Center",
+                                        "ImageOptions": {
+                                            "Path": "{Item.Team.LogoPath}",
+                                            "VerticalAlignment": "Center"
+                                        }
+                                    },
+                                    {
+                                        "BlockType": "text",
+                                        "Source": "{Item.Driver.Name}",
+                                        "FontSize": 80,
+                                        "FontName": "Formula1-Bold.ttf",
+                                        "Foreground": "#ffffff",
+                                        "Padding": "20"
+                                    }
+                                ]
                             }
                         },                        
 
@@ -53,18 +76,20 @@
                             "MarginLeft" : 20,
                             "Template": {
                                 
-                                "BlockType": "dock",
+                                "BlockType": "stack",
                                 "PaddingLeft" : 24,
                                 "PaddingRight" : 24,
-                                "Background": "{BackgroundDefault}",                                
+                                "Background": "#ffffff",                                
                                 "Items": [                                    
                                     {
                                         "BlockType": "text",
                                         "Source": "{Item.Points}",
-                                        "HorizontalAlignment": "Right",
+                                        "HorizontalAlignment": "Center",
                                         "VerticalAlignment": "Center",
-                                        "Foreground" : "{StandingsPointsForeground}",
-                                        "TextOptionsExtern": "primaryNumber"
+                                        "FontSize": 80,
+                                        "FontName": "Formula1-Bold.ttf",
+                                        "Foreground": "#000000",
+                                        "Padding": "12"
                                     }
                                 ],
                                 "Triggers" :
@@ -81,14 +106,37 @@
                          //position_jump
                          {
                             "Header": "",
-                            "PaddingLeft" : 0,
-                            "MarginLeft" : -4,
-                            "Template":
-                            {
-                                "BlockType" : "component",
-                                "PaddingLeft" : 0,                               
-                                "PaddingRight" : 12,
-                                "ComponentName" : "position_jump_cell"    
+                            "MarginLeft" : 20,
+                            "Template": {
+                                "BlockType" : "stack",
+                                "PaddingLeft" : 10,                               
+                                "PaddingRight" : 10,
+                                "Background": "#ffffff",
+                                "Width": 150,
+                                "VerticalAlignment": "Center",
+                                "HorizontalAlignment": "Center",
+                                "Items": [
+                                    {
+                                        "BlockType" : "image",
+                                        "RenderIf" : "{Item.PositionJump, Converter=NumberGreater, Parameter=0}",
+                                        "Source" : "arrow_up.png",
+                                        "HorizontalAlignment": "Center",
+                                        "VerticalAlignment" : "Center",
+                                        "Height" : 40,
+                                        "Width": 80,
+                                        "MarginLeft": 35                                                             
+                                    },
+                                    {
+                                        "BlockType" : "image",
+                                        "RenderIf" : "{Item.PositionJump, Converter=NumberLess, Parameter=0}",
+                                        "Source" : "arrow_down.png",
+                                        "HorizontalAlignment": "Center",
+                                        "VerticalAlignment" : "Center",
+                                        "Height" : 40  ,
+                                        "Width": 80,
+                                        "MarginLeft": 35                                                    
+                                    }
+                                ] 
                             }
                         }
                     ]
